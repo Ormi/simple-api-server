@@ -14,6 +14,8 @@ I have bread experience with GitLab CI/CD from my work envinroment, but I wanted
 
 This is simle api application which fetch data from remote server, procced it on own server and send them to the client. The client show this data in nice interactive bar graph.
 
+https://user-images.githubusercontent.com/3997725/112686852-e689ae80-8e76-11eb-941c-da2baadef007.mp4
+
 Server side - NodeJS
 Client side - React
 Infrastructure - Docker
