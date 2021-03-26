@@ -50,6 +50,15 @@ Available API endpoints:
 3. access client side it on `127.0.0.1:8080`
 4. access server api on `127.0.0.1:8080/48d75c359ce4`
 
+### How to contribute
+
+Make a git clone.
+
+Choose a branch in which you want to contribure `backend`, `frontend`, `pipeline`.
+
+Make a desired changes or ceate an Issue, then make a pull request.
+
+Repo maintainer @Ormi will take a look and will approve after it will pass the pipeline.
 
 ## Infrasturcture information
 
