@@ -22,7 +22,7 @@ RUN npm install
 COPY . .
 
 # TODO Maybe expose is not the best option for prod
-EXPOSE 3000
+EXPOSE 8080
 
 # TODO divide dev and prod deployment
 

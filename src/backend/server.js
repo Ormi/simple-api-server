@@ -13,9 +13,9 @@ const fetch = require('node-fetch');
 const path = require("path");
 
 // Constants
-const PORT = 3000;
+const PORT = 8080;
 const STATIC_ASSETS_PATH = path.resolve(`${__dirname}/../../static`);
-const HOST = '127.0.0.1';
+const HOST = '0.0.0.0';
 // @TODO rewrite this in more global universal API manner
 const urlQuestion = "https://api.mentimeter.com/questions/48d75c359ce4";
 const urlResults = "https://api.mentimeter.com/questions/48d75c359ce4/result";
