@@ -63,6 +63,7 @@ const app = express();
 // Serve front end assets which have been built by webpack
 app.use("/static", express.static(STATIC_ASSETS_PATH));
 app.get("/", (request, response) => {
+  console.log("Client fetches data");
 	response.send(`
 <!DOCTYPE html>
 <html>
