@@ -61,7 +61,9 @@ The pipeline consists of three stages:
 
 ## Things to improve
 
-1. Divide pipeline for dev and production, make main production branch and dev branch as development branch
-2. Prepare some cluster on Kubernetes where this will be deployed
-3. Write unit, application, and integration tests
+1. Divide pipeline for dev and production, make main production branch and dev branch as development branch.
+2. Prepare some cluster on Kubernetes where this will be deployed.
+3. Write unit, application, and integration tests.
+4. Take a look at security of this application.
+5. Improve everything what has TODO tag inside the applicaion.
 
