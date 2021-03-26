@@ -35,6 +35,15 @@ jobs:
             docker build . --file Dockerfile
           fi
 
+  stage:
+    runs-on: ubuntu-latest
+
+    steps:
+      -name: Build Application
+        run: |
+          npm i
+          npm run build
+          npm start
   # Push image to GitHub Packages.
   # See also https://docs.docker.com/docker-hub/builds/
   push:

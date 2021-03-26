@@ -53,5 +53,5 @@ Availible api end points:
 
 1. Divide pipeline for dev and production, make main production branch and dev branch as development branch
 2. Prepare some cluster on Kubernetes where this will be deployed
-3. 
+3. Write unit, application and integration tests
 
