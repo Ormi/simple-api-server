@@ -38,7 +38,7 @@ Available API endpoints:
 #### In Docker localy
 
 1. `docker build -t mentimeter .`
-2. `docker run -p 8080:8080 mentimeter`
+2. `docker run -p 8080:8080 mentimeter:latest`
 3. access client side it on `127.0.0.1:8080`
 4. access server api on `127.0.0.1:8080/48d75c359ce4`
 
