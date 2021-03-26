@@ -12,40 +12,42 @@ I have bread experience with GitLab CI/CD from my work envinroment, but I wanted
 
 ## Application Information
 
+This is simle api application which fetch data from remote server, procced it on own server and send them to the client. The client show this data in nice interactive bar graph.
+
+Server side - NodeJS
+Client side - React
+Infrastructure - Docker
+
 Availible api end points:
-1. /<random> - only return same random request
-2. /48d75c359ce4 - returns mentimeter data payload
-3. / - client endpoint to show bar graph of mentimeter data
+1. `/<random>` - only return same random request
+2. `/48d75c359ce4` - returns mentimeter data payload
+3. `/` - client endpoint to show bar graph of mentimeter data
 
 ### How to run
 
 #### Localy
 
-```
-1. npm i
-2. npm run build
-3. npm start
-4. access client side it on "127.0.0.1:8080"
-5. access server api on "127.0.0.1:8080/48d75c359ce4"
-```
+1. `npm i`
+2. `npm run build`
+3. `npm start`
+4. access client side it on `127.0.0.1:8080`
+5. access server api on `127.0.0.1:8080/48d75c359ce4`
 
 #### In Docker localy
 
-```
-1. docker build -t mentimeter .
-2. docker run -p 8080:8080 mentimeter
-3. access client side it on "127.0.0.1:8080"
-4. access server api on "127.0.0.1:8080/48d75c359ce4"
-```
+1. `docker build -t mentimeter .`
+2. `docker run -p 8080:8080 mentimeter`
+3. access client side it on `127.0.0.1:8080`
+4. access server api on `127.0.0.1:8080/48d75c359ce4`
 
 #### In Docker from GitHub container registry
 
-```
-1. docker pull docker.pkg.github.com/ormi/simple-api-server/image:latest
-2. docker run -p 8080:8080 docker.pkg.github.com/ormi/simple-api-server/image:latest
-3. access client side it on "127.0.0.1:8080"
-4. access server api on "127.0.0.1:8080/48d75c359ce4"
-```
+
+1. `docker pull docker.pkg.github.com/ormi/simple-api-server/image:latest`
+2. `docker run -p 8080:8080 docker.pkg.github.com/ormi/simple-api-server/image:latest`
+3. access client side it on `127.0.0.1:8080`
+4. access server api on `127.0.0.1:8080/48d75c359ce4`
+
 
 ## Infrasturcture information
 
