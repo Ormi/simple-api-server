@@ -4,7 +4,9 @@ import Plot from 'react-plotly.js';
 const gitHubUrl = "http://127.0.0.1:8080/48d75c359ce4";
 
 function App() {
-  const [userData, setUserData] = useState({});
+  const [userQuestion, setUserData] = useState({});
+  const [graphLabels, setGraphLabels] = useState({});
+  const [graphScores, setGraphScores] = useState({});
 
   useEffect(() => {
     getGitHubUserWithFetch();
@@ -15,30 +17,26 @@ function App() {
     const jsonData = await response.json();
     console.log(jsonData);
     setUserData(jsonData);
+    var names = jsonData.results.map(x => x.label);
+    setGraphLabels(names)
+    var scores = jsonData.results.map(x => x.score[0]);
+    setGraphScores(scores);
   };
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>{userData.question}</h2>
-      </header>
-      <div className="user-container">
-        <div><pre>{JSON.stringify(userData.results, null, 2) }</pre></div>
         <Plot
         data={[
           {
-            x: [1, 2, 3],
-            y: [2, 6, 3],
-            type: 'scatter',
-            mode: 'lines+markers',
-            marker: {color: 'red'},
+            x: graphLabels,
+            y: graphScores,
+            type: 'bar',
+            name: 'bar chart example'
           },
-          {type: 'bar', x: [1, 2, 3], y: [2, 5, 3]},
         ]}
-        layout={ {width: 320, height: 240, title: 'A Fancy Plot'} }
+        layout={ {width: 400, height: 400, title: userQuestion.question} }
       />
       </div>
-    </div>
   );
 }
 
