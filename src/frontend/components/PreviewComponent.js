@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Plot from 'react-plotly.js';
 
+// TODO elegant way how to pass this to FE
 const gitHubUrl = "http://127.0.0.1:8080/48d75c359ce4";
 
 function App() {
@@ -12,10 +13,10 @@ function App() {
     getGitHubUserWithFetch();
   }, []);
 
+  // TODO do parsing in BE side and create a better protocol for BE-FE data exchange
   const getGitHubUserWithFetch = async () => {
     const response = await fetch(gitHubUrl);
     const jsonData = await response.json();
-    console.log(jsonData);
     setUserData(jsonData);
     var names = jsonData.results.map(x => x.label);
     setGraphLabels(names)
