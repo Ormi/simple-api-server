@@ -14,7 +14,7 @@ I have bread experience with GitLab CI/CD from my professional experience, but I
 
 This is simple API application that fetch data from a remote mentimeter API server, procced them, and sends them to the client. The client show this data in a nice interactive bar graph.
 
-https://user-images.githubusercontent.com/3997725/112686941-04571380-8e77-11eb-88e7-1101ce1f1f07.mp4
+![ezgif-2-c6dc0b160f99](https://user-images.githubusercontent.com/3997725/112688038-99a6d780-8e78-11eb-94f2-f2f53e41ecf1.gif)
 
 Server side - NodeJS
 Client side - React
