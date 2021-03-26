@@ -4,8 +4,13 @@
   "description": "Simple API application showing graphs deployed in Docker",
   "author": "mi.ormos@gmail.com",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ormi/simple-api-server"
+  },
+  "license": "MIT",
   "scripts": {
-    "build": "webpack --mode development --entry ./src/frontend/index.js --output ./static/bundle.js",
+    "build": "webpack --mode development --entry ./src/frontend/index.js --output-path ./static/bundle.js",
     "start": "node src/backend/server.js"
   },
   "dependencies": {
@@ -16,10 +21,10 @@
   },
   "devDependencies": {
     "@sucrase/webpack-loader": "^2.0.0",
-    "react-plotly.js": "^2.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sucrase": "^3.15.0",
-    "webpack": "^4.43.0"
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.5.0"
   }
 }

@@ -13,7 +13,7 @@ const fetch = require('node-fetch');
 const path = require("path");
 
 // Constants
-const PORT = 8080;
+const PORT = 3000;
 const STATIC_ASSETS_PATH = path.resolve(`${__dirname}/../../static`);
 const HOST = '127.0.0.1';
 // @TODO rewrite this in more global universal API manner
@@ -48,9 +48,13 @@ setTimeout(() => {
 }, 3000);
 
 // App
+// TODO Endpoint logic improvments
+// TODO Handling error states
+// TODO Add security for to many requests on bad endpoints
 const app = express();
 // Serve front end assets which have been built by webpack
 app.use("/static", express.static(STATIC_ASSETS_PATH));
+app.use(express.static('public'))
 app.get("/", (request, response) => {
   console.log("Client fetches data");
 	response.send(`
@@ -58,7 +62,7 @@ app.get("/", (request, response) => {
     <html>
       <body>
         <div id="container"></div>
-        <script src="/static/bundle.js"></script>
+        <script src="/static/bundle.js/main.js"></script>
       </body>
     </html>
   `);
