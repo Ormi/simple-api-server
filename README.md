@@ -1,18 +1,18 @@
 ## General information
 
-I focused mostly to demonstrate CI/CD processes here than make an amazing application. As my field of interest is for DevOps. So the app is not even elegant.
-But my application still pass the requirements and with little adjustments can be used in production.
+I focused mostly to demonstrate CI/CD processes here then make an amazing application. As my field of interest is DevOps. So the app is not even elegant.
+But my application still passes the requirements and with little adjustments can be used in production.
 
-Building and debugging an app took a lot of energy / free time. For example one webpack library bug took me almost two hours, so the FE can work properly. And when I dockerize it, it broke again. Not too much time have left to pertect the pipelines. For this I am quite sad about.
-For future I would advise you to provide already made applciation so the person doing assesment for a DevOps position can concentrate and demonstrate mostly his CI/CD skills. This was more for fullstack position I believe.
+Building and debugging an app took a lot of energy / free time. For example, one webpack library bug took me almost two hours, so the FE can work properly. And when I dockerize it, it broke again. Not too much time has been left to protect the pipelines. For this, I am quite sad about it.
+For the future, I would advise you to provide an already made application so the person doing the assignment for a DevOps position can concentrate and demonstrate mostly his CI/CD skills. This was more for a full-stack position I believe.
 
-I did not have too much free time to do it more elegantly due to my other life/work responsibilities at the moment, but I put in comments what I would improve in future. They are marked with the TODO tag in comments in source files. Especially Dockerfile, Server.js, PreviewComponent.js and folder .github/workflows
+I did not have too much free time to do it more elegantly due to my other life/work responsibilities at the moment, but I put in comments on what I would improve in the future. They are marked with the `TODO` tag in the comments in source files. Especially `Dockerfile`, `server.js`, `PreviewComponent.js` and folder `.github/workflows`.
 
-I have bread experience with GitLab CI/CD from my work envinroment, but I wanted to try and learn something new here, this is why I choose GitHub and his Actions, aslo due to fact that your are using them.
+I have bread experience with GitLab CI/CD from my professional experience, but I wanted to try and learn something new here, this is why I choose GitHub and his Actions, also due to fact that you are using them and all my personal repos are on GitHub.
 
 ## Application Information
 
-This is simle api application which fetch data from remote server, procced it on own server and send them to the client. The client show this data in nice interactive bar graph.
+This is simple API application that fetch data from a remote mentimeter API server, procced them, and sends them to the client. The client show this data in a nice interactive bar graph.
 
 https://user-images.githubusercontent.com/3997725/112686941-04571380-8e77-11eb-88e7-1101ce1f1f07.mp4
 
@@ -20,10 +20,10 @@ Server side - NodeJS
 Client side - React
 Infrastructure - Docker
 
-Availible api end points:
+Available API endpoints:
 1. `/<random>` - only return same random request
 2. `/48d75c359ce4` - returns mentimeter data payload
-3. `/` - client endpoint to show bar graph of mentimeter data
+3. `/` - client endpoint to show a bar graph of mentimeter data
 
 ### How to run
 
@@ -33,7 +33,7 @@ Availible api end points:
 2. `npm run build`
 3. `npm start`
 4. access client side it on `127.0.0.1:8080`
-5. access server api on `127.0.0.1:8080/48d75c359ce4`
+5. access server API on `127.0.0.1:8080/48d75c359ce4`
 
 #### In Docker localy
 
@@ -53,9 +53,15 @@ Availible api end points:
 
 ## Infrasturcture information
 
+The pipeline consists of three stages:
+
+1. Test including unit-test, integration-test, and build test of front end
+2. Application build from Dockerfile to stagging
+3. Application publish to GitHub Docker Hub.
+
 ## Things to improve
 
 1. Divide pipeline for dev and production, make main production branch and dev branch as development branch
 2. Prepare some cluster on Kubernetes where this will be deployed
-3. Write unit, application and integration tests
+3. Write unit, application, and integration tests
 
