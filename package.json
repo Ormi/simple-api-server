@@ -1,7 +1,7 @@
 {
   "name": "docker_web_app",
   "version": "1.0.0",
-  "description": "Node.js on Docker",
+  "description": "Simple API application showing graphs deployed in Docker",
   "author": "mi.ormos@gmail.com",
   "main": "server.js",
   "scripts": {
@@ -9,19 +9,17 @@
     "start": "node src/backend/server.js"
   },
   "dependencies": {
-    "d3": "^6.6.1",
     "express": "^4.16.1",
     "node-fetch": "^2.6.1",
-    "plotly": "^1.0.6",
     "plotly.js": "^1.58.4",
     "react-plotly.js": "^2.5.1"
   },
   "devDependencies": {
     "@sucrase/webpack-loader": "^2.0.0",
+    "react-plotly.js": "^2.5.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sucrase": "^3.15.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^4.43.0"
   }
 }
